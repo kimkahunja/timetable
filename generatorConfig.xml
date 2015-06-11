@@ -30,9 +30,7 @@
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
 	     
-  <table tableName = "groups" domainObjectName = "Groups"/>
-  <table tableName = "user" domainObjectName = "User"/>
-  <table tableName = "menu" domainObjectName = "Menu"/>
-  <table tableName = "permissions" domainObjectName = "Permissions"/>
+  <table tableName = "tt_subjects" domainObjectName = "Subject"/>
+  <table tableName = "tt_classes" domainObjectName = "Class"/>  
  </context>
 </generatorConfiguration>

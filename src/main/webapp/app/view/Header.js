@@ -9,7 +9,7 @@ Ext.define('TimeTabler.view.Header', {
     items: [
         {
             xtype: 'label',
-            html: '<div id="titleHeader"><b>Store Manager</b></div>'
+            html: '<div id="titleHeader"><b>Time Tabler</b></div>'
         },
         {
             xtype: 'tbfill'

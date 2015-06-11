@@ -2,7 +2,11 @@ package com.reinvent.mappers;
 
 import com.reinvent.model.Menu;
 import com.reinvent.model.MenuExample;
+import com.reinvent.model.wrappers.MenuWrapper;
+
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface MenuMapper {
@@ -93,4 +97,6 @@ public interface MenuMapper {
      * @mbggenerated Thu Jun 11 19:52:24 EAT 2015
      */
     int updateByPrimaryKey(Menu record);
+    List<MenuWrapper> fetchMenus(Map<String,Object> map);
+    List<MenuWrapper> fetchMenusC(Map<String,Object> map);
 }

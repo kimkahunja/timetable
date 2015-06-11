@@ -11,7 +11,7 @@
 
 <mvc:annotation-driven />
 
-<context:component-scan base-package="com.topline" />
+<context:component-scan base-package="com.reinvent" />
 <context:annotation-config />
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	<property name="prefix" value="/WEB-INF/jsp/" />
@@ -31,8 +31,8 @@
 
 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	<property name="dataSource" ref="dataSource" />
-	<property name="typeAliasesPackage" value="com.topline.model"/>
-	<property name="mapperLocations" value="classpath*:com/topline/dbMaps/*.xml" />
+	<property name="typeAliasesPackage" value="com.reinvent.model"/>
+	<property name="mapperLocations" value="classpath*:com/reinvent/dbMaps/*.xml" />
 </bean>
 
 <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
@@ -40,7 +40,7 @@
 </bean>
 
 <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-	<property name="basePackage" value="com.topline.mappers" />
+	<property name="basePackage" value="com.reinvent.mappers" />
 </bean>
 
 <tx:annotation-driven transaction-manager="transactionManager" />
@@ -48,7 +48,7 @@
 	<property name="dataSource" ref="dataSource" />
 </bean>
 <bean id="standardJsonResponseBean"
-		class="com.topline.web.StandardJsonResponseImpl">
+		class="com.reinvent.web.StandardJsonResponseImpl">
 	</bean>	
 	
 	<bean id="jacksonObjectMapperBean"

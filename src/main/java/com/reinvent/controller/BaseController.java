@@ -12,6 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import com.reinvent.web.StandardJsonResponse;
+import com.reinvent.mappers.ClassMapper;
+import com.reinvent.mappers.GroupsMapper;
+import com.reinvent.mappers.MenuMapper;
+import com.reinvent.mappers.PermissionsMapper;
+import com.reinvent.mappers.SubjectMapper;
+import com.reinvent.mappers.UserMapper;
 
 public class BaseController extends MultiActionController {
 	@Autowired(required=true)
@@ -22,7 +28,18 @@ public class BaseController extends MultiActionController {
 	public   final String  UPDATED_SUCCESSFULLY ="Record Successfully Updated...";
 	public   final String  DELETED_SUCCESSFULLY ="Record Successfully Deleted...";
 	
-	
+	@Autowired(required=true)
+	UserMapper userMapper;
+	@Autowired(required=true)
+	GroupsMapper groupsMapper;
+	@Autowired(required=true)
+	MenuMapper menuMapper;
+	@Autowired(required=true)
+	PermissionsMapper permissionsMapper;
+	@Autowired(required=true)
+	SubjectMapper subjectMapper;
+	@Autowired(required=true)
+	ClassMapper classMapper;
 	public String jsonObject(StandardJsonResponse jsonResponse){
 		String json=null;
 		ObjectMapper mapper = new ObjectMapper();

@@ -2,7 +2,7 @@ Ext.define('TimeTabler.model.menu.Item', {
     extend: 'Ext.data.Model',
 
     uses: [
-        'InventoryApp.model.menu.Root'
+        'TimeTabler.model.menu.Root'
     ],
 
     idProperty: 'id',
